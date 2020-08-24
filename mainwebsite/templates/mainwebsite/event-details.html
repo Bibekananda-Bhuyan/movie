@@ -1,0 +1,86 @@
+  {% extends "mainwebsite/layout.html" %}
+{% block body%}
+{% load static %}
+
+    <!-- ==========Event-Banner-Section========== -->
+    <section class="event-banner-section bg_img" data-background="../media/{{event.Event_big_banner}}">
+        <div class="container">
+             
+        </div>
+    </section>
+    <!-- ==========Event-Banner-Section========== -->
+
+    <!-- ==========Event-Book-Search========== -->
+    <section class="event-book-search padding-top pt-lg-0">
+        <div class="container">
+            <div class="event-search bg_img" data-background="{% static 'mainwebsite/assets/images/ticket/ticket-bg01.jpg' %}">
+                <div class="event-search-top">
+                    <div class="left">
+                        <h3 class="title">{{event.Event_name}}</h3>
+                    </div>
+                    <div class="right">
+                         
+						</ul>
+                        <a href="/event-checkout/{{event.id}}" class="custom-button">book tickets</a>
+                    </div>
+                </div>
+                <div class="event-search-bottom">
+                    <div class="contact-side">
+                         
+                        <div class="item">
+                            <div class="item-thumb">
+                                <img src="{% static 'mainwebsite/assets/images/event/icon/event-icon02.png' %}" alt="event">
+                            </div>
+                            <div class="item-content">
+                                <span class="up">{{event.Event_address}}</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item-thumb">
+                                <img src="{% static 'mainwebsite/assets/images/event/icon/event-icon03.png' %}" alt="event">
+                            </div>
+                            <div class="item-content">
+                                <span class="up">Drop us a line:</span>
+                                <a href="MailTo:{{event.Event_email}}">{{event.Event_email}}</a>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </section>    
+    <!-- ==========Event-Book-Search========== -->
+
+    <!-- ==========Event-About========== -->
+    <section class="event-about padding-top padding-bottom">
+        <div class="container">
+            <div class="row justify-content-between flex-wrap-reverse">
+                <div class="col-lg-7 col-xl-6">
+                    <div class="event-about-content">
+                        <div class="section-header-3 left-style m-0">
+                            <span class="cate">are you ready to attend?</span>
+                            <h2 class="title">{{event.Event_name}}</h2>
+                            <p>{{event.Event_summery}}
+                            </p>
+                            <a href="/event-checkout/{{event.id}}" class="custom-button">book tickets</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-7">
+                    <div class="event-about-thumb">
+                        <img src="../media/{{event.Event_thumbnil}}" alt="event">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==========Event-About========== -->
+
+     
+
+    
+
+     
+ 
+        {% endblock %}

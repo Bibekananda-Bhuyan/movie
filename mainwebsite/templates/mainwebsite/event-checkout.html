@@ -1,0 +1,55 @@
+ {% extends "mainwebsite/layout.html" %}
+{% block body%}
+{% load static %}
+
+    <br>
+    <br>
+
+    <form action="" method="POST" style="margin-top: 20px">
+{% csrf_token %}
+    <div class="movie-facility padding-bottom padding-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8" style="display: block;margin: auto;">
+                     
+                    <div class="checkout-widget checkout-contact">
+                        <h5 class="title">Share your Contact  Details </h5>
+                        <div class="checkout-contact-form">
+                            <div class="form-group">
+                                <input type="text" placeholder="Full Name" name="fname">
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="email" name="useremail" placeholder="Enter your Mail">
+                            </div>
+                            <div class="form-group">
+                                <input type="number" name="userphoneno" placeholder="Enter your Phone Number ">
+                            </div>
+                            <div class="form-group">
+                               <button class="custom-button back-button">proceed</button>
+                            </div>
+                           
+                             
+                        </div>
+                    </div>
+                      {% if messages %}
+                           
+                               {% for message in messages %}
+                                   <p style="color:red">DANGER :  {{ message }} !</p>
+                                {% endfor %}
+                                
+                             
+                          {% endif %}
+                </div>
+                 
+            </div>
+        </div>
+    </div>
+
+    </form>
+
+
+    <!-- ==========Movie-Section========== -->
+ 
+
+        {% endblock %}

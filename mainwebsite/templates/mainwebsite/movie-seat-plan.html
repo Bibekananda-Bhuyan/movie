@@ -1,0 +1,390 @@
+{% extends "mainwebsite/layout.html" %}
+{% block body%}
+{% load static %}
+  <br>
+  <br>
+  <form action="" method="POST">
+    {% csrf_token %}
+  <input type="hidden" id="ppc" value="300">
+  <input type="hidden" id="tppc" value="0">
+    <!-- ==========Movie-Section========== -->
+
+
+     
+    <div class="seat-plan-section padding-bottom padding-top">
+        <div class="container">
+            <div class="screen-area">
+                <h4 class="screen">screen</h4>
+                <div class="screen-thumb">
+                    <img src="http://pixner.net/boleto/demo/assets/images/movie/screen-thumb.png" alt="movie">
+                </div>
+                <h5 class="subtitle">silver plus</h5>
+                <div class="screen-wrapper">
+                    <ul class="seat-area">
+                        <li class="seat-line">
+                            <span>G</span>
+                            <ul class="seat--area">
+                                <li class="front-seat">
+                                    <ul>
+                                        <li class="single-seat">
+                                             <input type="checkbox" value="G1" name="htime"><br>G1
+                                        </li>
+                                        <li class="single-seat">
+                                            <input type="checkbox" value="G2" name="htime"><br>G2
+                                        </li>
+                                        <li class="single-seat">
+                                            <input type="checkbox" value="G3" name="htime"><br>G3
+                                        </li>
+                                        <li class="single-seat">
+                                            <input type="checkbox" value="G4" name="htime"><br>G4
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="front-seat">
+                                    <ul>
+                                        <li class="single-seat">
+                                            <input type="checkbox" value="G5" name="htime"><br>G5
+                                        </li>
+                                        <li class="single-seat">
+                                            <input type="checkbox" value="G6" name="htime"><br>G6
+                                        </li>
+                                        <li class="single-seat">
+                                           <input type="checkbox" value="G7" name="htime"><br>G7
+                                        </li>
+                                        <li class="single-seat">
+                                           <input type="checkbox" value="G8" name="htime"><br>G8
+                                        </li>
+                                        <li class="single-seat">
+                                            <input type="checkbox" value="G9" name="htime"><br>G9
+                                        </li>
+                                        <li class="single-seat">
+                                            <input type="checkbox" value="G10" name="htime"><br>G10
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="front-seat">
+                                    <ul>
+                                        <li class="single-seat">
+                                            <input type="checkbox" value="G11" name="htime"><br>G11
+                                        </li>
+                                        <li class="single-seat">
+                                           <input type="checkbox" value="G12" name="htime"><br>G12
+                                        </li>
+                                        <li class="single-seat">
+                                            <input type="checkbox" value="G13
+                                            " name="htime"><br>G13
+                                        </li>
+                                        <li class="single-seat">
+                                            <input type="checkbox" value="G14" name="htime"><br>G14
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <span>G</span>
+                        </li>
+                        <li class="seat-line">
+                            <span>f</span>
+                            <ul class="seat--area">
+                                <li class="front-seat">
+                                    <ul>
+                                        <li class="single-seat">
+                                            <input type="checkbox" value="F1" name="htime"><br>F1
+                                        </li>
+                                        <li class="single-seat">
+                                            <input type="checkbox" value="F2" name="htime"><br>F2
+                                        </li>
+                                        <li class="single-seat">
+                                            <input type="checkbox" value="F3" name="htime"><br>F3
+                                        </li>
+                                        <li class="single-seat">
+                                            <input type="checkbox" value="F4" name="htime"><br>F4
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="front-seat">
+                                    <ul>
+                                        <li class="single-seat">
+                                            <input type="checkbox" value="F5" name="htime"><br>F5
+                                        </li>
+                                        <li class="single-seat seat-free">
+                                            <input type="checkbox" value="F6" name="htime"><br>F6
+                                        </li>
+                                        <li class="single-seat seat-free">
+                                           <input type="checkbox" value="F7" name="htime"><br>F7
+                                        </li>
+                                        <li class="single-seat">
+                                            <input type="checkbox" value="F8" name="htime"><br>F8
+                                        </li>
+                                        <li class="single-seat">
+                                           <input type="checkbox" value="F9" name="htime"><br>F9
+                                        </li>
+                                        <li class="single-seat">
+                                            <input type="checkbox" value="F10" name="htime"><br>F10
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="front-seat">
+                                    <ul>
+                                        <li class="single-seat seat-free">
+                                           <input type="checkbox" value="F11" name="htime"><br>F11
+                                        </li>
+                                        <li class="single-seat seat-free">
+                                            <input type="checkbox" value="F12" name="htime"><br>F12
+                                        </li>
+                                        <li class="single-seat seat-free">
+                                            <input type="checkbox" value="F13" name="htime"><br>F13
+                                        </li>
+                                        <li class="single-seat">
+                                            <input type="checkbox" value="F14" name="htime"><br>F14
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <span>f</span>
+                        </li>
+                    </ul>
+                </div>
+                <h5 class="subtitle">silver plus</h5>
+                <div class="screen-wrapper">
+                    <ul class="seat-area couple">
+                        <li class="seat-line">
+                            <span>e</span>
+                             <ul class="seat--area">
+                                <li class="front-seat">
+                                   <ul>
+                                       <li class="single-seat seat-free">
+                                            <input type="checkbox" value="E1" name="htime"><br>E1
+                                        </li>
+                                        <li class="single-seat seat-free">
+                                            <input type="checkbox" value="E2" name="htime"><br>E2
+                                        </li>
+                                        <li class="single-seat">
+                                            <input type="checkbox" value="E3" name="htime"><br>E3
+                                        </li>
+                                        <li class="single-seat">
+                                            <input type="checkbox" value="E4" name="htime"><br>E4
+                                        </li>
+                                   </ul>
+                                </li>
+                                <li class="front-seat">
+                                    <ul>
+                                       <li class="single-seat seat-free">
+                                            <input type="checkbox" value="E5" name="htime"><br>E5
+                                        </li>
+                                        <li class="single-seat seat-free">
+                                            <input type="checkbox" value="E6" name="htime"><br>E6
+                                        </li>
+                                        <li class="single-seat">
+                                            <input type="checkbox" value="E7" name="htime"><br>E7
+                                        </li>
+                                        <li class="single-seat">
+                                            <input type="checkbox" value="E8" name="htime"><br>E8
+                                        </li>
+                                   </ul>
+                                </li>
+                                <li class="front-seat">
+                                    <ul>
+                                       <li class="single-seat seat-free">
+                                            <input type="checkbox" value="E9" name="htime"><br>E9
+                                        </li>
+                                        <li class="single-seat seat-free">
+                                            <input type="checkbox" value="E10" name="htime"><br>E10
+                                        </li>
+                                        <li class="single-seat">
+                                            <input type="checkbox" value="E11" name="htime"><br>E11
+                                        </li>
+                                        <li class="single-seat">
+                                            <input type="checkbox" value="E12" name="htime"><br>E12
+                                        </li>
+                                   </ul>
+                                </li>
+                            </ul>
+                            <span>e</span>
+                        </li>
+                        <li class="seat-line">
+                            <span>d</span>
+                             <ul class="seat--area">
+                                <li class="front-seat">
+                                   <ul>
+                                       <li class="single-seat seat-free">
+                                            <input type="checkbox" value="D1" name="htime"><br>D1
+                                        </li>
+                                        <li class="single-seat seat-free">
+                                            <input type="checkbox" value="D2" name="htime"><br>D2
+                                        </li>
+                                        <li class="single-seat">
+                                            <input type="checkbox" value="D3" name="htime"><br>D3
+                                        </li>
+                                        <li class="single-seat">
+                                            <input type="checkbox" value="D4" name="htime"><br>D4
+                                        </li>
+                                   </ul>
+                                </li>
+                                <li class="front-seat">
+                                    <ul>
+                                       <li class="single-seat seat-free">
+                                            <input type="checkbox" value="D5" name="htime"><br>D5
+                                        </li>
+                                        <li class="single-seat seat-free">
+                                            <input type="checkbox" value="D6" name="htime"><br>D6
+                                        </li>
+                                        <li class="single-seat">
+                                            <input type="checkbox" value="D7" name="htime"><br>D7
+                                        </li>
+                                        <li class="single-seat">
+                                            <input type="checkbox" value="D8" name="htime"><br>D8
+                                        </li>
+                                   </ul>
+                                </li>
+                                <li class="front-seat">
+                                    <ul>
+                                       <li class="single-seat seat-free">
+                                            <input type="checkbox" value="D9" name="htime"><br>D9
+                                        </li>
+                                        <li class="single-seat seat-free">
+                                            <input type="checkbox" value="D10" name="htime"><br>D10
+                                        </li>
+                                        <li class="single-seat">
+                                            <input type="checkbox" value="D11" name="htime"><br>D11
+                                        </li>
+                                        <li class="single-seat">
+                                            <input type="checkbox" value="D12" name="htime"><br>D12
+                                        </li>
+                                   </ul>
+                                </li>
+                            </ul>
+                            <span>d</span>
+                        </li>
+                         
+                        
+                        <li class="seat-line">
+                            <span>c</span>
+                             <ul class="seat--area">
+                                <li class="front-seat">
+                                   <ul>
+                                       <li class="single-seat seat-free">
+                                            <input type="checkbox" value="C1" name="htime"><br>C1
+                                        </li>
+                                        <li class="single-seat seat-free">
+                                            <input type="checkbox" value="C2" name="htime"><br>C2
+                                        </li>
+                                        <li class="single-seat">
+                                            <input type="checkbox" value="C3" name="htime"><br>C3
+                                        </li>
+                                        <li class="single-seat">
+                                            <input type="checkbox" value="C4" name="htime"><br>C4
+                                        </li>
+                                   </ul>
+                                </li>
+                                <li class="front-seat">
+                                    <ul>
+                                       <li class="single-seat seat-free">
+                                            <input type="checkbox" value="C5" name="htime"><br>C5
+                                        </li>
+                                        <li class="single-seat seat-free">
+                                            <input type="checkbox" value="C6" name="htime"><br>C6
+                                        </li>
+                                        <li class="single-seat">
+                                            <input type="checkbox" value="C7" name="htime"><br>C7
+                                        </li>
+                                        <li class="single-seat">
+                                            <input type="checkbox" value="C8" name="htime"><br>C8
+                                        </li>
+                                   </ul>
+                                </li>
+                                <li class="front-seat">
+                                    <ul>
+                                       <li class="single-seat seat-free">
+                                            <input type="checkbox" value="C9" name="htime"><br>C9
+                                        </li>
+                                        <li class="single-seat seat-free">
+                                            <input type="checkbox" value="C10" name="htime"><br>C10
+                                        </li>
+                                        <li class="single-seat">
+                                            <input type="checkbox" value="C11" name="htime"><br>C11
+                                        </li>
+                                        <li class="single-seat">
+                                            <input type="checkbox" value="C12" name="htime"><br>C12
+                                        </li>
+                                   </ul>
+                                </li>
+                            </ul>
+                             
+                            <span>C</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="proceed-book bg_img" data-background="http://pixner.net/boleto/demo/assets/images/movie/movie-bg-proceed.jpg">
+                <div class="proceed-to-book">
+                    <div class="book-item">
+                        <span>You have Choosed Seat</span>
+                        <h3 class="title" id="sse"></h3>
+                    </div>
+                    <div class="book-item">
+                        <span>total price</span>
+                        <h3 class="title" id="tp"></h3>
+                    </div>
+                    <div class="book-item">
+                         
+                        <button class="custom-button" type="submit">proceed</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </form>
+    <!-- ==========Movie-Section========== -->
+
+    <style type="text/css">
+        input[type=checkbox], input[type=radio] {
+                box-sizing: border-box;
+                padding: 0;
+                    width: 30px;
+                    height: 30px;
+                    cursor: pointer;
+                 
+            }
+            input[type="checkbox"]:disabled {
+              background: red !important;
+            }
+    </style>
+
+ 
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+
+<script>
+    $(document).ready(function() {
+        $("input[name='htime']").click(function(){
+            var favorite = [];
+            $.each($("input[name='htime']:checked"), function(){            
+                favorite.push($(this).val());
+            });
+            
+            
+            var tcc=document.getElementById("ppc").value;
+             
+            
+            tcc=parseInt(tcc);
+            var tcsc=tcc*(favorite.length);
+            document.getElementById("sse").innerHTML= favorite.join(", ");
+            document.getElementById("tp").innerHTML= "Rs. "+tcsc;
+            document.getElementById("tppc").value=tcsc;
+
+        });
+    });
+
+
+    {% for i in moviebookedt %}
+        
+        $("input[value='{{i.seat_no}}']").prop( "disabled", true );
+
+    {% endfor %}
+</script>
+
+
+
+
+       {% endblock %}

@@ -1,0 +1,98 @@
+{% extends "mainwebsite/layout.html" %}
+{% block body%}
+{% load static %}
+    <!-- ==========Banner-Section========== -->
+    <section class="banner-section">
+        <div class="banner-bg bg_img bg-fixed" data-background="assets/images/banner/banner01.jpg"></div>
+        <div class="container">
+            <div class="banner-content">
+                <h1 class="title  cd-headline clip"><span class="d-block">book your</span> tickets for 
+                    <span class="color-theme cd-words-wrapper p-0 m-0">
+                        <b class="is-visible">Movie</b>
+                         
+                         
+                    </span>
+                </h1>
+                <p>Safe, secure, reliable ticketing.Your ticket to live entertainment!</p>
+            </div>
+        </div>
+    </section>
+    <!-- ==========Banner-Section========== -->
+
+    
+    <!-- ==========Movie-Section========== -->
+    <section class="movie-section padding-top padding-bottom">
+        <div class="container">
+            <div class="tab">
+                <div class="section-header-2">
+                    <div class="left">
+                        <h2 class="title">movies</h2>
+                        <p>Be sure not to miss these Movies today.</p>
+                    </div>
+                    <ul class="tab-menu">
+                        <li class="active">
+                            now showing 
+                        </li>
+                        
+                        
+                    </ul>
+                </div>
+                <div class="tab-area mb-30-none">
+                    <div class="tab-item active">
+                        <div class="owl-carousel owl-theme tab-slider">
+
+                             
+                            {% for movie in movies %}
+
+                            <div class="item">
+                                <div class="movie-grid">
+                                    <div class="movie-thumb c-thumb">
+                                        <a href="movie-details/{{movie.id}}">
+                                            <img src="media/{{movie.movie_thumbnil}}" alt="movie">
+                                        </a>
+                                    </div>
+                                    <div class="movie-content bg-one">
+                                        <h5 class="title m-0">
+                                            <a href="movie-details/{{movie.id}}">{{movie.movie_name}}</a>
+                                        </h5>
+                                        <ul class="movie-rating-percent">
+                                            <li>
+                                                <div class="thumb">
+                                                    <img src="{% static 'mainwebsite/assets/images/movie/tomato.png' %}" alt="movie">
+                                                </div>
+                                                <span class="content">{{movie.movie_likes}}%</span>
+                                            </li>
+                                            <li>
+                                                <div class="thumb">
+                                                    <img src="{% static 'mainwebsite/assets/images/movie/cake.png' %}" alt="movie">
+                                                </div>
+                                                <span class="content">{{movie.movie_Audience_score}}%</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div> 
+                            </div>
+
+                            {% endfor %}
+
+
+
+
+                             
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==========Movie-Section========== -->
+
+    
+
+<style type="text/css">
+    .banner-section {
+    padding: 250px 0 16px;
+    position: relative;
+}
+</style>
+    {% endblock %}

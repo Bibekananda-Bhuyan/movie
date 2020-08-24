@@ -1,0 +1,36 @@
+{% extends "mainwebsite/base.html" %}
+ 
+{% block title %}Booking Records{% endblock title %}
+ 
+{% block content %}
+ <div class="col-md-12">
+        <h4 style="text-align: center;"> Movie Bookings</h4> 
+        <br> 
+        <div class="table-responsive">
+   
+   <form action="" method="POST" style="width: 300px;
+    display: block;
+    margin: auto;">
+    {% csrf_token %}
+   {% for movieb in moviebs %}  
+    <tr>  
+      
+      <label for="fname">Order Id:</label><br>
+      <input type="text" id="fname" name="orderid"  value="{{ movieb.Order_id }}"><br>
+      <label for="fname1">User name:</label><br>
+      <input type="text" id="fname1" name="username"  value="{{ movieb.user_name }}"><br>
+      <label for="fname2">User Phone:</label><br>
+      <input type="text" id="fname2" name="userphoneo"  value="{{ movieb.user_phone_no }}">
+      <br>
+      <input type="submit" value="Update" style="margin-top: 20px">
+      
+       
+     
+    </tr>  
+   {% endfor %} 
+   </tbody>
+         
+ 
+        </div>
+    </div>
+{% endblock content %}

@@ -1,0 +1,40 @@
+ {% extends "mainwebsite/layout.html" %}
+{% block body%}
+{% load static %}
+
+    <br>
+    <br>
+ 
+    <div class="movie-facility padding-bottom padding-top">
+        <div class="container">
+            <div class="row">
+                 
+                <div class="col-lg-4" style="display: block;margin:auto;">
+                    <div class="booking-summery bg-one">
+                        <h4 class="title">Booking Successful !</h4>
+                        <ul>
+                             
+                             
+                            <li>
+                                <h6 class="subtitle mb-0"><span>Booking Id</span><span>{{request.session.bookingid}}</span></h6>
+                            </li>
+                        </ul>
+                         
+                        
+                    </div>
+                    <div class="proceed-area  text-center">
+                        <button class="custom-button back-button" onclick="window.location.href='/'">Go To Home</button>
+                         
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+
+    <!-- ==========Movie-Section========== -->
+ 
+
+        {% endblock %}
